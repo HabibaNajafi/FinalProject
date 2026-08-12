@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg, #7bcdd0, #005f63)
+}
+
+#login-box{
+    width:380px;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 0 20px rgba(0,0,0,0.1);
+    height:600px;
+}
+.login-box2{
+    width:380px;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 0 20px rgba(0,0,0,0.1);
+    height:450px;
+
+}
+
+#login-box h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
+}
+.login-box2 h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
+}
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    margin-bottom:8px;
+    color:#444;
+    font-weight:500;
+}
+
+input{
+    padding:12px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+input:focus{
+    outline:none;
+    
+}
+
+button{
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    background:#23a9a9;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+#submitBtn{
+       padding:12px;
+    border:none;
+    border-radius:5px;
+    background:#23a9a9;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+    text-align: center;
+}
+
+button:hover{
+    background:#29d2d2;
+}
+
+p{
+    text-align:center;
+    margin-top:20px;
+}
+
+a{
+    text-decoration:none;
+    color:#4a90e2;
+    font-weight:bold;
+}

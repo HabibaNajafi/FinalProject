@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 700;
+   background-color: #005f63;
+}
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+    margin-top: 5px;
+}
+#link{
+   gap: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#link a{
+    color: white;
+    text-decoration: none;
+}
+#link a:hover{
+    color: wheat;
+    text-decoration: underline;
+}
+#linkheader{
+    text-decoration: none;
+    gap: 40px;
+}
+#linkheader:hover{
+    color: #0d5c3a;
+}
+#plan{
+    text-decoration: none;
+    background-color: #024b3f;
+    border-radius: 20px;
+    padding: 12px 20px;
+    color: white;
+}
+#plan:hover{
+    background: #0d5c3a;
+    color: rgb(9, 90, 9);
+    color: white
+}
+
+/* Hero Section */
+
+#contact-hero{
+    height: 100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("./TVbackground.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+     animation: heroZoom 2s ease-in-out infinite alternate;
+}
+@keyframes heroZoom{
+    from{
+        background-size:100%;
+    }
+
+    to{
+        background-size:110%;
+    }
+}
+
+
+#contact-content{
+    color: white;
+    width: 80%;
+    margin: auto;
+}
+
+#contact-content h1{
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+#contact-content p{
+    width: 600px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Contact Section */
+
+#contact-section{
+    width: 85%;
+    margin: 80px auto;
+    display: flex;
+    gap: 60px;
+}
+
+#contact-info{
+    flex: 1;
+}
+
+#contact-form{
+    flex: 2;
+}
+
+#contact-info h2,
+#contact-form h2{
+    color: #0c6d63;
+    margin-bottom: 30px;
+}
+
+.info-box{
+    margin-bottom: 30px;
+}
+
+.info-box h3{
+    margin-bottom: 10px;
+    color: #0c6d63;
+}
+
+.info-box p{
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Form */
+
+.row{
+    display: flex;
+    gap: 20px;
+}
+
+.row input{
+    width: 50%;
+}
+
+input,
+textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+textarea{
+    resize: none;
+}
+
+button{
+    padding: 15px 35px;
+    border: none;
+    background: #0c6d63;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover{
+    background: #09554d;
+}
+
+/* Map */
+
+#map{
+    margin-top: 40px;
+}
+
+#map img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#footer1{
+    background-color: #ffffff;
+    width: 100%;
+}
+#footer2{
+    background-color: #005f63;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 100px;
+    
+}
+
+#footer2 button{
+    /* background-color: #00796b;  */
+}
+#news h3{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+#news p{
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+#news{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* بخش اصلی لینک‌های فوتر */
+#footer3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 30px ;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: #005f63;
+    color: white;
+}
+
+#a:hover{
+    color: orange !important;
+    text-decoration: underline;
+}
+
+
+#more-btn{
+    text-decoration: none;
+    background-color:#053b43;
+    border-radius: 20px;
+    padding: 12px 20px;
+    color: white;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+#more-btn:hover{
+    background: #0d5c3a;
+    color: rgb(9, 90, 9);
+    color: white
+}
+
+
+/* استایل لوگو */
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+    color: #004d40;
+}
+
+.logo-text strong {
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #111;
+}
+
+.logo-text span {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.brand{
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* استایل لیست‌ها و لینک‌ها */
+#footer4 h4 {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#footer4 ul {
+    list-style: none;
+}
+
+#footer4 ul li {
+    margin-bottom: 12px;
+}
+
+#footer4 ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+#footer4  ul li a:hover {
+    color: #004d40;
+}
+
+
+/* شبکه‌های اجتماعی */
+#social-links {
+    display: flex;
+    gap: 20px;
+}
+
+#icon {
+    width: 32px;
+    height: 32px;
+    background-color: #111;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* بخش کپی رایت انتها */
+#footer5 {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #eeeeee;
+    font-size: 0.8rem;
+    color: #888;
+    background-color: #005f63;
+    margin-top: -10px;
+}
+
+/* ریسپونسیو برای صفحات کوچک و موبایل */
+@media (max-width: 768px) {
+    #news {
+        flex-direction: column;
+        text-align: center;
+    }
+    #form {
+        width: 100%;
+        flex-direction: column;
+    }
+    #form input {
+        width: 100%;
+    }
+    #footer {
+        flex-direction: column;
+        gap: 30px;
+        
+    }
+}
+
+    

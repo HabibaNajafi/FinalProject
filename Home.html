@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script src="csproject.js"></script>
+</head>
+<body>
+
+    <header>
+        <div id="header">
+            <div id="logo">
+                <!-- <img style="width: 50px; height: 50px; border-radius: 50px;" src="./image/Heratimage4.jpg" alt=""> -->
+                <img src="./image/NewLogo.PNG" style="width: 60px; height: 60px; border-radius: 50%;" alt="">
+                <h3 style="margin-top: 10px; font-size: 20px;">SAFARISTAN</h3>
+            </div>
+            <div id="link">   
+                <a id="linkheader" href="Home.html">Home</a>  
+                <a id="linkheader" href="Distination.html">Destination</a>
+                <a id="linkheader" href="Experience.html">Experience</a>
+                <a id="linkheader" href="Restaurant.html">Restaurants</a>
+                <a id="linkheader" href="contact.html">Contact</a> 
+                <a href="index.html">Logout</a>  
+            </div>
+            <div>
+                <a id="plan" href="https://letsgoafghanistan.com/">Plan Your Trip</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2></h2>
+            <h1>Discover the Beauty of Afghanistan</h1>
+            <p>From majestic mountains to ancient cities, experience warm hospitality, rich traditions, and unforgettable adventures.</p>
+            
+            <div class="btn-container">
+                <button class="btn-primary">Explore Destinations &rarr;</button>
+                <button class="btn-secondary" style="border-radius: 40px; padding: 12px 25px;">
+                    <!-- Simple inline play icon replacement -->
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle;">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                   <a href="https://www.youtube.com/watch?v=-og0e13_ki4"> Watch Video</a>
+                </button>
+            </div>
+        </div>
+
+        <!-- Features Info Bar -->
+        <div class="features-container">
+            <div class="feature-item">
+                <div class="feature-icon">🏔️</div>
+                <h3>Breathtaking Nature</h3>
+                <p>Explore stunning landscapes from mountains to deserts.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🏛️</div>
+                <h3>Rich Culture</h3>
+                <p>Discover ancient history, traditions and heritage.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">👥</div>
+                <h3>Warm Hospitality</h3>
+                <p>Experience the kindness of the Afghan people.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🛡️</div>
+                <h3>Safe Travel</h3>
+                <p>Travel with confidence with our guides.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📸</div>
+                <h3>Unique Experiences</h3>
+                <p>Create memories that last a lifetime.</p>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br><br><br>
+
+    <section class="filter-section container">
+      <h2 class="section-title">Browse by Interest</h2>
+      <div class="filter-chips" id="filterChips">
+        <a href="https://letsgoafghanistan.com/"><button class="chip" data-filter="all">All</button></a>
+        <a href="https://www.gettyimages.com/photos/afghanistan-nature"><button class="chip" data-filter="nature">Nature</button></a>
+       <a href="https://www.pbs.org/newshour/politics/asia-jan-june11-timeline-afghanistan"><button class="chip" data-filter="historical">Historical</button></a> 
+        <a href="https://www.semrush.com/trending-websites/af/religion-and-belief"><button class="chip" data-filter="religious">Religious</button></a>
+        
+        <a href="https://koryogroup.com/blog/one-night-camping-at-band-e-amir-lake-in-afghanistan"><button class="chip" data-filter="camping">Camping</button></a>
+        
+       
+       
+      </div>
+    </section>
+    <br><br>
+
+    <h2 class="section-title">Popular Destinations</h2>
+
+<section class="popular-destinations">
+    <div class="container">
+        <!-- عنوان بخش -->
+        
+        
+        <!-- مجمو‌عه کارت‌ها و دکمه‌های چپ و راست -->
+        <div class="slider-wrapper">
+            <button class="nav-btn prev-btn">&#10094;</button>
+            
+            <div class="cards-container">
+                <!-- کارت ۱: بند امیر -->
+                <div class="card">
+                    <img src="./image/band amir.jpg" alt="Band-e-Amir">
+                    <div class="card-content">
+                        <h3>Band-e-Amir</h3>
+                        <p class="subtitle">The Blue Lakes</p>
+                        <p class="location"><span>&#128205;</span> Bamyan</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./image/Manira2.jpeg" alt="Band-e-Amir">
+                    <div class="card-content">
+                        <h3>Minaret of Jam</h3>
+                        <p class="subtitle">The Blue Masqe</p>
+                        <p class="location"><span>&#128205;</span> Bamyan</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./image/wakhan.jpeg" alt="Band-e-Amir">
+                    <div class="card-content">
+                        <h3>Wakhan</h3>
+                        <p class="subtitle">The Blue Lakes</p>
+                        <p class="location"><span>&#128205;</span> Bamyan</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./image/babur.avif" alt="Band-e-Amir">
+                    <div class="card-content">
+                        <h3>Babur Garden</h3>
+                        <p class="subtitle">Inside garden</p>
+                        <p class="location"><span>&#128205;</span> Bamyan</p>
+                    </div>
+                </div>
+                <!-- کارت ۲: بامیان -->
+                <div class="card">
+                    <img src="./image/Bamyan.jpg" alt="Bamyan">
+                    <div class="card-content">
+                        <h3>Bamyan</h3>
+                        <p class="subtitle">Land of Buddhas</p>
+                        <p class="location"><span>&#128205;</span> Bamyan</p>
+                    </div>
+                </div>
+
+                <!-- کارت ۳: هرات -->
+                <div class="card">
+                    <img src="./image/herat.jpg" alt="Herat">
+                    <div class="card-content">
+                        <h3>Herat</h3>
+                        <p class="subtitle">The Pearl of Khorasan</p>
+                        <p class="location"><span>&#128205;</span> Herat</p>
+                    </div>
+                </div>
+
+                <!-- کارت ۴: مزار شریف -->
+                <div class="card">
+                    <img src="./image/mazar.jpg" alt="Mazar-e-Sharif">
+                    <div class="card-content">
+                        <h3>Mazar-e-Sharif</h3>
+                        <p class="subtitle">The Blue City</p>
+                        <p class="location"><span>&#128205;</span> Balkh</p>
+                    </div>
+                </div>
+
+                <!-- کارت ۵: کابل -->
+                <div class="card">
+                    <img src="./image/kabul.jpg" alt="Kabul">
+                    <div class="card-content">
+                        <h3>Kabul</h3>
+                        <p class="subtitle">The Heart of Afghanistan</p>
+                        <p class="location"><span>&#128205;</span> Kabul</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-btn next-btn">&#10095;</button>
+        </div>
+    </div>
+</section>
+<br><br>
+
+
+<section id="stats">
+    <div id="stats-container">
+
+        <div class="stat-box">
+            <i style="color:#a7e1db;" class="fa-solid fa-clock"></i>
+            <div>
+                <h2>50+</h2>
+                <p>Unique Experiences</p>
+            </div>
+        </div>
+
+        <div class="stat-box">
+            <i style=" color:#a7e1db;" class="fa-solid fa-location-dot"></i>
+            <div>
+                <h2>25+</h2>
+                <p>Destinations Covered</p>
+            </div>
+        </div>
+
+        <div class="stat-box">
+            <i style=" color:#a7e1db;" class="fa-solid fa-users"></i>
+            <div>
+                <h2>10K+</h2>
+                <p>Happy Travelers</p>
+            </div>
+        </div>
+
+        <div class="stat-box">
+            <i style=" color: #a7e1db;" class="fa-solid fa-award"></i>
+            <div>
+                <h2>4.9/5</h2>
+                <p>Traveler Rating</p>
+            </div>
+        </div>
+
+    </div>
+</section><br><br>
+
+
+
+ <section class="why-visit">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Why Visit</span>
+          <h2 class="section-title">Why Visit Afghanistan</h2>
+        </div>
+        <div class="why-visit__grid">
+          <div class="why-card" data-reveal>
+            <span class="why-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M4 38 L18 18 L26 28 L32 20 L44 38 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="34" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+            </span>
+            <h3>Nature</h3>
+            <p style="margin-bottom: 20px;">Turquoise lakes, snow-capped peaks and valleys carved by ancient rivers.</p>
+            <a id="aa" href="https://www.gettyimages.com/photos/afghanistan-nature" class="clickMe" style="text-decoration: none; font-weight: bold; color: #0f766e; ">Exlore More</a>
+          </div>
+          <div class="why-card" data-reveal>
+            <span class="why-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M10 40h28M14 40V18l10-8 10 8v22M20 40V26h8v14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>History</h3>
+            <p style="margin-bottom: 20px;">Standing on the Silk Road, home to millennia of empires and artisans.</p>
+            <a id="aa" href="https://www.pbs.org/newshour/politics/asia-jan-june11-timeline-afghanistan" class="clickMe" style="text-decoration: none; font-weight: bold; color: #0f766e;">Exlore More</a>
+          </div>
+          <div class="why-card" data-reveal>
+            <span class="why-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M24 4v8M24 36v8M4 24h8M36 24h8M9 9l6 6M33 33l6 6M39 9l-6 6M15 33l-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Culture</h3>
+            <p style="margin-bottom: 20px;">A tapestry of languages, music and craft passed down through generations.</p>
+            <a id="aa" href="https://www.semrush.com/trending-websites/af/hospitality" class="clickMe" style="text-decoration: none; font-weight: bold; color: #0f766e;">Exlore More</a>
+          </div>
+          <div class="why-card" data-reveal>
+            <span class="why-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M24 40C12 32 6 24 6 16a10 10 0 0 1 18-6 10 10 0 0 1 18 6c0 8-6 16-18 24Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Hospitality</h3>
+            <p style="margin-bottom: 20px;">Guests are treated as honored family &mdash; melmastia is a way of life.</p>
+             <a id="aa" href="https://www.semrush.com/trending-websites/af/hospitality" class="clickMe" style="text-decoration: none; font-weight: bold; color: #0f766e;">Exlore More</a>
+          </div>
+          <div class="why-card" data-reveal>
+            <span class="why-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M8 40 24 8l16 32Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M16 40 24 24l8 16" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+            </span>
+            <h3>Adventure</h3>
+            <p style="margin-bottom: 20px;">Trekking, climbing and off-the-map roads for the truly curious traveler.</p>
+            <a id="aa" href="https://untamedborders.com/destinations/afghanistan/" class="clickMe" style="text-decoration: none; font-weight: bold; color: #0f766e;">Exlore More</a>
+          </div>
+          <div class="why-card" data-reveal>
+            <span class="why-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><ellipse cx="24" cy="30" rx="16" ry="8" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 30c0-8 5.4-20 12-20s12 12 12 20" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+            </span>
+            <h3>Food</h3>
+            <p style="margin-bottom: 20px;">Kabuli pulao, mantu and fresh-baked naan shared around a shared cloth.</p>
+            <a id="aa" href="https://www.afghanfood.org/" class="clickMe" style="text-decoration: none; font-weight: bold; color: #0f766e;">Exlore More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<footer id="footer1">
+    <div id="footer2">
+         <a style="color: white;" id="more-btn" href="personal.html">Developed By Habiba Najafi</a>
+    </div>
+<div>
+    <div id="footer3">
+        <div style="display: inline-block;">
+        <div id="footer4">
+            <div id="logo">
+                <img style="width: 60px; height: 60px; border-radius: 50%;" src="./image/NewLogo.PNG" alt="">
+                <div id="logo-text">
+                    <strong>SAFARISTAN</strong>
+                </div>
+            </div>
+            <p id="brand">Discover the beauty of Afghanistan.</p>
+        </div>
+        <div id="footer4 social">
+             <h4 style="text-align: center; font-size: 20px; margin-bottom: 10px;">Follow Us</h4>
+             <div id="social-links">
+                <!-- <i class="fa-regular fa-envelope" style="font-size: 40px; color: rgb(223, 57, 57);"></i>
+                <i class="fa-brands fa-youtube" style="font-size: 40px; color: red;"></i>
+                <i class="fa-brands fa-facebook" style="font-size: 40px; color: blue;"></i>
+                <i class="fa-brands fa-linkedin" style="font-size: 40px; color: darkblue;"></i> -->
+
+               <a href="https://www.instagram.com/ziyafat_restaurant_kbl/"><i class="fa-regular fa-envelope" style="font-size: 30px; color: white;"></i></a>
+                <a href="https://www.youtube.com/results?search_query=zeyafat+restaurant+in+kabul"><i class="fa-brands fa-youtube" style="font-size: 30px; color: white;"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook" style="font-size: 30px; color: white;"></i></a>
+                <a href="https://www.linkedin.com/in/habiba-najafi-369588423/"><i class="fa-brands fa-linkedin" style="font-size: 30px; color: white;"></i>
+             </div></a>
+        </div>
+        </div>
+
+        <div id="footer4">
+            <h4 style="color: white;">Quick links</h4>
+            <ul>
+                <li><a id="a" style="color: white;"  href="">Home</a></li>
+                <li><a id="a" style="color: white;" href="">Distination</a></li>
+                <li><a id="a" style="color: white;" href="">Trave Guide</a></li>
+                <li><a id="a" style="color: white;" href="">About Us</a></li>
+            </ul>
+        </div>
+
+        <div id="footer4">
+            <h4 style="color: white;">Top Distinations</h4>
+            <ul>
+                <li><a id="a" style="color: white;" href="">Band-e-Amir</a></li>
+                <li><a id="a" style="color: white;" href="">Bamyan</a></li>
+                <li><a id="a" style="color: white;" href="">Herat</a></li>
+                 <li><a id="a" style="color: white;" href="">Mazar-e-sharif</a></li>
+                  <li><a id="a" style="color: white;" href="">Kabul</a></li>
+            </ul>
+        </div>
+        
+        <div id="footer4">
+            <h4 style="color: white;">Travel Guides</h4>
+            <ul>
+                <li><a id="a" style="color: white;" href="">Visa information</a></li>
+                <li><a id="a" style="color: white;" href="">Best time to visit</a></li>
+                <li><a id="a" style="color: white;" href="">packing Tips</a></li>
+                 <li><a id="a" style="color: white;" href="">Safety Tips</a></li>
+                  <li><a id="a" style="color: white;" href="">FAQS</a></li>
+            </ul>
+        </div>
+        <div id="footer4">
+            <h4 style="color: white;">Contact Us</h4>
+            <ul>
+                <li><a id="a" style="color: white;" href="">auw242115@auw.edu.bd</a></li>
+                <li><a id="a" style="color: white;" href="">+8801401164343</a></li>
+                <li><a id="a" style="color: white;" href="">Kabul, Afghanistan</a></li>
+               
+            </ul>
+        </div>
+
+       
+    </div>
+</div>
+    <hr>
+        <div id="footer5">
+            <p>&copy; 2026 Safaristan. ALL rights rserved.</p>
+        </div>
+
+        
+</footer>
+
+
+<script>
+const cards = document.querySelectorAll(".card");
+const nextBtn = document.querySelector(".next-btn");
+const prevBtn = document.querySelector(".prev-btn");
+
+let currentIndex = 0;
+const cardsToShow = 4;
+
+function showCards() {
+    cards.forEach((card, index) => {
+        if (
+            index >= currentIndex &&
+            index < currentIndex + cardsToShow
+        ) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+nextBtn.addEventListener("click", () => {
+    if (currentIndex + cardsToShow < cards.length) {
+        currentIndex++;
+        showCards();
+    }
+});
+
+prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        showCards();
+    }
+});
+
+showCards();
+</script>
+
+
+    
+</body>
+</html>
