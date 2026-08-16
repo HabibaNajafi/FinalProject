@@ -7,6 +7,273 @@
     <title>Document</title>
     <link rel="stylesheet" href="./Restaurant.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./safaristan-features.css">
+    <style>
+        
+#bookingModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 650px;
+    max-height: 85vh;
+    margin: 5vh auto;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+
+#closeModal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    color: #264653;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#closeModal:hover {
+    color: #E07A5F;
+}
+
+
+
+#booking-form {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+
+
+
+#booking-form h2 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    color: #008C8C;
+    font-size: 30px;
+}
+
+
+
+
+.booking-subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 28px;
+    line-height: 1.4;
+}
+
+
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+
+
+.form-group {
+    width: 100%;
+    min-width: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #264653;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-group label span {
+    color: #999;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #d5d5d5;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #264653;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    height: 46px;
+}
+
+
+
+.form-group input[type="date"] {
+    width: 100%;
+    min-width: 0;
+    height: 46px;
+    padding: 10px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+.form-group select {
+    height: 46px;
+    cursor: pointer;
+}
+
+
+
+.form-group textarea {
+    height: 90px;
+    resize: vertical;
+    line-height: 1.4;
+}
+
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #008C8C;
+    box-shadow: 0 0 5px rgba(0, 140, 140, 0.2);
+}
+
+
+
+.full-width {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+
+
+#confirmBooking {
+    display: block;
+    width: 100%;
+    height: 48px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #F4B942;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#confirmBooking:hover {
+    background-color: #D99A24;
+    transform: translateY(-2px);
+}
+
+
+
+.modal-content::-webkit-scrollbar {
+    width: 7px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #008C8C;
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .modal-content {
+        width: 94%;
+        max-height: 90vh;
+        margin: 5vh auto;
+        padding: 20px 15px;
+    }
+
+    #booking-form {
+        padding: 10px 5px;
+    }
+
+    #booking-form h2 {
+        font-size: 25px;
+    }
+
+    .booking-subtitle {
+        font-size: 14px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .form-group input[type="date"] {
+        font-size: 14px;
+    }
+
+    #confirmBooking {
+        height: 46px;
+        font-size: 15px;
+    }
+}
+    </style>
 </head>
 
 <body>
@@ -17,7 +284,7 @@
             <div id="logo">
                 <!-- <img style="width: 50px; height: 50px; border-radius: 50px;" src="./image/Heratimage4.jpg" alt=""> -->
                 <img src="./image/NewLogo.PNG" style="width: 60px; height: 60px; border-radius: 50%;" alt="">
-                <h3 style="margin-top: 10px; font-size: 20px;">SAFARISTAN</h3>
+                <h3 style="margin-top: 10px; font-size: 35px;">SAFARISTAN</h3>
             </div>
             <div id="link">
                 <a id="linkheader" href="Home.html">Home</a>
@@ -264,7 +531,105 @@
         <div class="modal-content">
             <span id="closeModal">&times;</span>
             <h2>Booking Information</h2>
-            <p>Thank you for choosing our hotel. Online booking will be available soon.</p>
+            <div id="booking-form">
+    <h2> Book Your Hotel</h2>
+    <p class="booking-subtitle">Complete the form below to reserve your room.</p>
+
+    <form>
+
+        <div class="form-row">
+
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <select id="guests" required>
+                    <option value="">Select guests</option>
+                    <option>1 Guest</option>
+                    <option>2 Guests</option>
+                    <option>3 Guests</option>
+                    <option>4 Guests</option>
+                    <option>5+ Guests</option>
+                </select>
+            </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+                <label for="checkin">Check-in Date</label>
+                <input type="date" id="checkin" required>
+            </div>
+
+            <div class="form-group">
+                <label for="checkout">Check-out Date</label>
+                <input type="date" id="checkout" required>
+            </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+                <label for="roomType">Room Type</label>
+                <select id="roomType" required>
+                    <option value="">Select room type</option>
+                    <option>Single Room</option>
+                    <option>Double Room</option>
+                    <option>Twin Room</option>
+                    <option>Family Room</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="rooms">Number of Rooms</label>
+                <select id="rooms" required>
+                    <option value="">Select rooms</option>
+                    <option>1 Room</option>
+                    <option>2 Rooms</option>
+                    <option>3 Rooms</option>
+                    <option>4+ Rooms</option>
+                </select>
+            </div>
+
+        </div>
+
+
+        <div class="form-group full-width">
+            <label for="requests">Special Requests <span>(Optional)</span></label>
+            <textarea id="requests"
+                placeholder="Any special requests or requirements"></textarea>
+        </div>
+
+
+        <button type="submit" id="confirmBooking">
+             Confirm Booking
+        </button>
+
+    </form>
+</div>
+            
         </div>
     </div>
 
@@ -277,6 +642,15 @@ const closeBtn = document.getElementById("closeModal");
 openBtns.forEach(button => {
     button.addEventListener("click", function () {
         modal.style.display = "block";
+
+        // Make the booking content scrollable
+        const bookingContent = modal.querySelector(".modal-content");
+
+        if (bookingContent) {
+            bookingContent.style.maxHeight = "85vh";
+            bookingContent.style.overflowY = "auto";
+            bookingContent.style.overflowX = "hidden";
+        }
     });
 });
 
@@ -289,7 +663,25 @@ window.addEventListener("click", function (event) {
         modal.style.display = "none";
     }
 });
+
+// Handle hotel booking form
+const bookingForm = modal.querySelector("form");
+
+if (bookingForm) {
+    bookingForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        alert(" Your hotel has been booked successfully!");
+
+        // Close the modal after booking
+        modal.style.display = "none";
+
+        // Clear the form
+        bookingForm.reset();
+    });
+}
 </script>
+<script src="./safaristan-features.js"></script>
 
 </body>
 

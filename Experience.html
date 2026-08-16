@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./Experience.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="./safaristan-features.css">
 </head>
 <body>
     <header>
@@ -13,7 +14,7 @@
             <div id="logo">
                 <!-- <img style="width: 50px; height: 50px; border-radius: 50px;" src="./image/Heratimage4.jpg" alt=""> -->
                 <img src="./image/NewLogo.PNG" style="width: 60px; height: 60px; border-radius: 50%;" alt="">
-                <h3 style="margin-top: 10px; font-size: 20px;">SAFARISTAN</h3>
+                <h3 style="margin-top: 10px; font-size: 35px;">SAFARISTAN</h3>
             </div>
             <div id="link">   
                 <a id="linkheader" href="Home.html">Home</a>  
@@ -22,7 +23,7 @@
                 <a id="linkheader" href="contact.html">Contact</a>   
             </div>
             <div>
-                <a id="plan" href="">Plan Your Trip</a>
+                <a id="plan" href="#">Plan Your Trip</a>
             </div>
         </div>
     </header>
@@ -188,20 +189,20 @@
 
 
 <!-- Testimonials Section -->
-<section id="testimonials">
+
+
+    <section id="testimonials">
 
     <h2>What Travelers Say</h2>
 
     <div id="testimonial-container">
 
-        <button class="arrow">&#10094;</button>
+        <button id="prevBtn" class="arrow">&#10094;</button>
 
         <div class="testimonial-card">
             <i class="fa-solid fa-quote-left quote"></i>
-
             <p>
                 Band-e Amir was the most beautiful place I have ever seen.
-                An unforgettable experience with amazing people.
             </p>
 
             <div class="user-info">
@@ -212,14 +213,11 @@
                 </div>
             </div>
 
-            <div class="stars">
-                ★★★★★
-            </div>
+            <div class="stars">★★★★★</div>
         </div>
 
         <div class="testimonial-card">
             <i class="fa-solid fa-quote-left quote"></i>
-
             <p>
                 The hospitality of the locals made our trip so special.
                 I can't wait to visit again!
@@ -233,35 +231,80 @@
                 </div>
             </div>
 
-            <div class="stars">
-                ★★★★★
-            </div>
+            <div class="stars">★★★★★</div>
         </div>
 
         <div class="testimonial-card">
             <i class="fa-solid fa-quote-left quote"></i>
-
             <p>
-                Exploring Bamyan and the culture was a life-changing
-                experience. Highly recommended!
+                Exploring Bamyan and the culture was a life-changing experience.
             </p>
 
             <div class="user-info">
-                <img src="./image2/emaa williemss.jpeg" alt="">
+                <img src="./image2/fatima2.jpg" alt="">
                 <div>
                     <h4>Emma Williams</h4>
                     <span>UK</span>
                 </div>
             </div>
 
-            <div class="stars">
-                ★★★★★
-            </div>
+            <div class="stars">★★★★★</div>
         </div>
-        
-        
-        
-        <button class="arrow">&#10095;</button>
+
+        <div class="testimonial-card">
+            <i class="fa-solid fa-quote-left quote"></i>
+            <p>
+                Afghanistan's mountains and valleys were breathtaking.
+                A truly unforgettable journey.
+            </p>
+
+            <div class="user-info">
+                <img src="./image2/sara.jpeg" alt="">
+                <div>
+                    <h4>Michael Brown</h4>
+                    <span>USA</span>
+                </div>
+            </div>
+
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="testimonial-card">
+            <i class="fa-solid fa-quote-left quote"></i>
+            <p>
+                The food, culture, and hospitality exceeded all my expectations.
+            </p>
+
+            <div class="user-info">
+                <img src="./image2/ali Khan.jpg" alt="">
+                <div>
+                    <h4>Ayesha Malik</h4>
+                    <span>Pakistan</span>
+                </div>
+            </div>
+
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="testimonial-card">
+            <i class="fa-solid fa-quote-left quote"></i>
+            <p>
+                Visiting Band-e-Amir was the highlight of my trip.
+                I would love to come back.
+            </p>
+
+            <div class="user-info">
+                <img src="./image2/fatima2.jpg" alt="">
+                <div>
+                    <h4>Sophia Wilson</h4>
+                    <span>UK</span>
+                </div>
+            </div>
+
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <button id="nextBtn" class="arrow">&#10095;</button>
 
     </div>
 
@@ -284,9 +327,10 @@
                     
                 </div>
             </div>
-            <p id="brand">Discover the beauty of Afghanistan.</p>
+            
+            
         </div>
-        <div id="footer4 social">
+        <div id="footer4-social">
              <h4 style="text-align: center; font-size: 20px; margin-bottom: 10px;">Follow Us</h4>
              <div id="social-links">
                 <!-- <i class="fa-regular fa-envelope" style="font-size: 40px; color: rgb(223, 57, 57);"></i>
@@ -294,10 +338,10 @@
                 <i class="fa-brands fa-facebook" style="font-size: 40px; color: blue;"></i>
                 <i class="fa-brands fa-linkedin" style="font-size: 40px; color: darkblue;"></i> -->
 
-               <i class="fa-regular fa-envelope" style="font-size: 30px; color: white;"></i>
-                <i class="fa-brands fa-youtube" style="font-size: 30px; color: white;"></i>
-                <i class="fa-brands fa-facebook" style="font-size: 30px; color: white;"></i>
-                <i class="fa-brands fa-linkedin" style="font-size: 30px; color: white;"></i>
+               <i id="us1" class="fa-regular fa-envelope" style="font-size: 30px; color: white;"></i>
+                <i id="us2" class="fa-brands fa-youtube" style="font-size: 30px; color: white;"></i>
+                <i id="us3" class="fa-brands fa-facebook" style="font-size: 30px; color: white;"></i>
+                <i id="us4" class="fa-brands fa-linkedin" style="font-size: 30px; color: white;"></i>
              </div>
         </div>
         </div>
@@ -354,6 +398,52 @@
         
 </footer>
 
+
 <script src="./csproject.js"></script>
+
+
+<div id="bookingModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeModal">&times;</span>
+
+        <h2>Picture</h2>
+
+        <div class="slider">
+
+            <button id="prevImage" class="arrow">&#10094;</button>
+
+            <img id="tripImage1" src="./image2/lake-bamyan.jpeg" alt="">
+            <img id="tripImage2" src="./image2/Herat- image.jpg" alt="">
+
+            <button id="nextImage" class="arrow">&#10095;</button>
+
+        </div>
+
+        <form>
+
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Start Date</label>
+            <input type="date">
+
+            <label>End Date</label>
+            <input type="date">
+
+            <button type="submit" id="submitBtn">
+                Submit
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+<script src="./safaristan-features.js"></script>
 </body>
 </html>

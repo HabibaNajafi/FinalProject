@@ -50,11 +50,16 @@ header{
 }
 #plan{
     text-decoration: none;
-    background-color: #024b3f;
+    background-color: #053b43;
     border-radius: 20px;
     padding: 12px 20px;
     color: white;
 }
+#logo h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #b49257;
+}
+
 #plan:hover{
     background: #0d5c3a;
     color: rgb(9, 90, 9);
@@ -257,6 +262,20 @@ button:hover{
     color: white
 }
 
+#us1:hover{
+color: #E76F51 !important;
+
+}
+#us2:hover{
+color:#FF0000 !important;
+
+}
+#us3:hover{
+color:#1877F2 !important;
+}
+#us4:hover{
+color: #0A66C2 !important;
+}
 
 /* استایل لوگو */
 #logo {

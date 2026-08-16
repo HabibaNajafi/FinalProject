@@ -9,7 +9,7 @@
     justify-content: center;
     gap: 80px;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 10px;
     
 }
@@ -20,7 +20,13 @@ header{
     width: 100%;
     z-index: 700;
     background: white;
-     background-color: #005f63;
+     background-color:#005f63;
+}
+#logo h3{
+     
+    color: #b49257;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #link a{
     color: white;
@@ -35,7 +41,7 @@ header{
     justify-content: center;
     align-items: center;
     /* gap: 10px; */
-    margin-top: 5px;
+    margin-top: 15px;
 }
 #link{
    gap: 50px;
@@ -52,7 +58,7 @@ header{
 }
 #plan{
     text-decoration: none;
-     background-color: #024b3f;
+     background-color: #053b43;
     border-radius: 20px;
     padding: 12px 20px;
     color: white;
@@ -225,54 +231,69 @@ background: #0d5c3a;
 #lake{
     display: flex;
     justify-content: center;
-    gap: 40px;
+    align-items: center;
+    gap: 50px;
+    margin: 60px 30px;
 }
-#lake-image{
-    width: 300;
-    height: 250;
+
+#lake-slider{
+    position: relative;
 }
-#lake-cotent{
-    display: inline-block;
-    justify-content: left;
-    line-height: 20px;
+
+#lakeImage{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
 }
+
+.slider-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.slider-btn:hover{
+    background: rgba(0,0,0,0.8);
+}
+
+#prevBtn{
+    left: 15px;
+}
+
+#nextBtn{
+    right: 15px;
+}
+
+#lake-content{
+    line-height: 1.8;
+}
+
 #lake-content a{
     text-decoration: none;
-     color: #0f766e;
+    color: #0f766e;
     font-size: 1rem;
     font-weight: 600;
-    transition: 0.3s;
+}
 
-}
-#lake-content a:hover{
-    
- background: #0d5c3a;
-    color: rgb(9, 90, 9);
-    color: white
-}
 #more-btn1{
-    text-decoration: none;
-    background-color:#053b43;
-    border-radius: 20px;
+    background-color: #053b43;
+    color: white !important;
     padding: 12px 20px;
-    color: white;
-    margin-left: 10px;
-    margin: 30px;
+    border-radius: 25px;
+    margin-top: 20px;
 }
 
-#more-btn{
-    text-decoration: none;
-    background-color:#053b43;
-    border-radius: 20px;
-    padding: 12px 20px;
-    color: white;
-    margin-left: 10px;
-    margin-top: 40px;
-}
-#more-btn:hover{
-    background: #0d5c3a;
-    color: rgb(9, 90, 9);
-    color: white
+#more-btn1:hover{
+    background-color: #0d5c3a;
 }
 #head-experience{
     display: flex;
@@ -280,19 +301,18 @@ background: #0d5c3a;
     align-items: center;
     gap: 10px;
     margin-top: 60px;
+    margin-right: 20px;
 }
 
 #card2{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     gap: 30px;
     padding: 20px 40px;
     text-align: center;
-    margin-left:80px;
-    
-
 }
+
 #card2-item{
     display: flex;
     justify-content: center;
@@ -305,19 +325,164 @@ background: #0d5c3a;
     background-color: aliceblue;
     transition: 0.4s;
 }
-#map{
+
+/* Map section layout */
+#map {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
 }
-#icon-l{
+
+.map-image-wrapper {
+    position: relative;
+    flex: 1 1 500px;
+    max-width: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-image-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+}
+
+.map-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#map-content {
+    flex: 1 1 350px;
+    max-width: 450px;
+}
+
+#icon-l {
     display: flex;
-    justify-content: center;
-    text-align: center;
+    align-items: center;
     gap: 10px;
+    margin-bottom: 15px;
 }
-.location{
-    padding-top:25px;
+
+.location {
+    font-size: 24px;
+    color: #1a5f5f;
+}
+
+#map-content p {
+    line-height: 1.6;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Map pins — invisible hotspots over the map's existing labeled pins */
+.map-pin {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.25s ease;
+}
+
+.map-pin:hover {
+    background-color: rgba(26, 95, 95, 0.15);
+}
+
+/* Pin info popup — hidden by default, only shown when a pin is clicked */
+.map-popup {
+    display: none !important;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    background: white;
+    padding: 16px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.map-popup.active {
+    display: block !important;
+    animation: popupFade 0.3s ease;
+}
+
+@keyframes popupFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.map-popup h3 {
+    margin: 0 0 6px 0;
+    color: #1a5f5f;
+}
+
+.map-popup p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+#popup-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    color: #888;
+}
+
+/* Scroll-reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+#more-bt{
+        text-decoration: none;
+    background-color: #053b43;
+    border-radius: 20px;
+    padding: 12px 20px;
+    color: white;
+
+    margin-top: 40px;
+
+}
+#more-bt:hover{
+    background: #0d5c3a;
+    color: rgb(9, 90, 9);
+    color: white;
+}
+#us1:hover{
+color: #E76F51 !important;
+
+}
+#us2:hover{
+color:#FF0000 !important;
+
+}
+#us3:hover{
+color:#1877F2 !important;
+}
+#us4:hover{
+color: #0A66C2 !important;
 }
 #footer1{
     background-color: #ffffff;

@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./Distination.css">
     <script src="./final2.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./safaristan-features.css">
 </head>
+
 <body>
     
     <header>
@@ -15,13 +17,13 @@
             <div id="logo">
                 <!-- <img style="width: 50px; height: 50px; border-radius: 50px;" src="./image/Heratimage4.jpg" alt=""> -->
                 <img src="./image/NewLogo.PNG" style="width: 60px; height: 60px; border-radius: 50%;" alt="">
-                <h3 style="margin-top: 10px; font-size: 20px;">SAFARISTAN</h3>
+                <h3 style="margin-top: 10px; font-size: 35px;">SAFARISTAN</h3>
             </div>
             <div id="link">   
                 <a id="linkheader" href="Home.html">Home</a>  
                 <a id="linkheader" href="Experience.html">Experience</a>
                 <a id="linkheader" href="Restaurant.html">Restaurant</a>
-                <a id="linkheader" href="">Contact</a>   
+                <a id="linkheader" href="contact.html">Contact</a>   
             </div>
             <div>
                 <a id="plan" href="">Plan Your Trip</a>
@@ -35,7 +37,7 @@
         <h1>Explore Afghanistan Destinations</h1>
         <p>Journey through mountains, lakes, ancient cities, <br> and cultural treasures. </p>
         <div id="hero2-btn">
-        <a href="https://realtalktravel.com/where-to-visit-afghanistan/"><button id="btn">Start Exploring &rarr;</button></a>
+        <a style="text-decoration: none;" href="https://realtalktravel.com/where-to-visit-afghanistan/"><button id="btn">Start Exploring &rarr;</button></a>
         </div>
         </div>  
     </section>
@@ -99,26 +101,43 @@
 <br><br><br><br><br>
 
     <div id="lake">
-        <div >
-            <img style="width: 600px; height: 400px; margin-left: 30px; border-radius: 5px;" src="./Distination-image/Band-e- amir.jpg" alt="">
-        </div>
 
-        <div id="lake-content"><br>
-            <a href="">Distination of the Month</a><br>
-            <h1>Band-e-Amir National Park</h1><br>
-            <p>known for its stunning blue lakes , dramaticcliffs,<br><br>and peaceful environment, Band-e-Amir is soe of Afghanistan's most beautiful natural wonders. <br> </p><br>
+    <div id="lake-slider">
+        <button id="prevBtn" class="slider-btn">&#10094;</button>
 
-            <ul>
-                <li> Six breathtaking lakes</li>
-                <li> prfect for nature lover</li>
-                <li> ideal for hiking and photography</li>
-                <li> Best time to visit:May-September</li>
-            </ul>
-            <br><br><br>
+        <img id="lakeImage" src="./Distination-image/lake/6.jpg" alt="Band-e-Amir">
+        
 
-            <a style="color: white;" id="more-btn1" href="https://en.wikipedia.org/wiki/Band-e_Amir_National_Park">Explore Band-e-Amir</a>
-        </div>
+        <button id="nextBtn" class="slider-btn">&#10095;</button>
     </div>
+
+    <div id="lake-content">
+
+        <a href="">Destination of the Month</a>
+
+        <h1>Band-e-Amir National Park</h1>
+
+        <p>
+            Known for its stunning blue lakes, dramatic cliffs,
+            and peaceful environment, Band-e-Amir is one of
+            Afghanistan's most beautiful natural wonders.
+        </p>
+
+        <ul>
+            <li>Six breathtaking lakes</li>
+            <li>Perfect for nature lovers</li>
+            <li>Ideal for hiking and photography</li>
+            <li>Best time to visit: May–September</li>
+        </ul>
+<br>
+        <a id="more-btn1"
+            href="https://en.wikipedia.org/wiki/Band-e_Amir_National_Park">
+            Explore Band-e-Amir
+        </a>
+
+    </div>
+
+</div>
     <br><br>
    
     <div id="head-experience">
@@ -126,7 +145,8 @@
         <h2>Travel Experience</h2>
     </div>
 
-    <div id="card2" >
+    <div style="display: flex; justify-content: center; text-align: center;">
+ <div id="card2" >
         <div id="card2-item" >
             <div style="height: 50px; width: 50px; border-radius: 50%; background-color: #053b43; display:inline-block; justify-content: center; align-items: center;padding-top: 12px;">
  <i style="color: white;" class="fa-solid fa-mountain"></i>
@@ -159,32 +179,45 @@
             </div>
         </div>
     </div>
-    <br><br>
-     <div id="head-experience">
-        <img style="width: 60px; height: 60px; border-radius: 50%;" src="./image/NewLogo.PNG" alt="">
-        <h2>Explore Distianation on Map</h2>
     </div>
+   
     <br><br>
+     <div id="head-experience" class="reveal">
+    <img style="width: 60px; height: 60px; border-radius: 50%;" src="./image/NewLogo.PNG" alt="">
+    <h2>Explore Distianation on Map</h2>
+</div>
+<br><br>
 
-    <div id="map">
-        <div >
-            <img style="width: 600px; height: 300px;" src="./Distination-image/map.png" alt="">
-        </div>
+<div id="map" class="reveal">
+    <div class="map-image-wrapper">
+        <img src="./Distination-image/map.png" alt="Map of Afghanistan destinations" class="map-img">
 
-        <div id="map-content" style="padding-top: 50px;">
-            <div id="icon-l">
-                <i class="fa-solid fa-location-dot location"></i>
-            <h2>Many Places,One Beauty</h2>
-            </div>
-            <p>Frome the north to the south, Afghanistan is<br>full of amazing places waiting to be explore. <br> </p>
+        <div class="map-pin" style="top: 25%; left: 55%;" data-city="Mazar-e-Sharif" data-desc="Home to the stunning Blue Mosque, a masterpiece of Islamic architecture."></div>
+        <div class="map-pin" style="top: 38%; left: 22%;" data-city="Herat" data-desc="Known for its ancient citadel and rich Persian-influenced culture."></div>
+        <div class="map-pin" style="top: 42%; left: 50%;" data-city="Bamyan" data-desc="Famous for the Band-e-Amir lakes and the historic Buddha niches."></div>
+        <div class="map-pin" style="top: 40%; left: 78%;" data-city="Kabul" data-desc="The vibrant capital, blending history with modern city life."></div>
+        <div class="map-pin" style="top: 58%; left: 42%;" data-city="Band-e-Amir" data-desc="Six breathtaking turquoise lakes surrounded by dramatic cliffs."></div>
 
+        <div id="map-popup" class="map-popup">
+            <button id="popup-close">&times;</button>
+            <h3 id="popup-title"></h3>
+            <p id="popup-desc"></p>
         </div>
     </div>
+
+    <div id="map-content">
+        <div id="icon-l">
+            <i class="fa-solid fa-location-dot location"></i>
+            <h2>Many Places, One Beauty</h2>
+        </div>
+        <p>From the north to the south, Afghanistan is full of amazing places waiting to be explored.</p>
+    </div>
+</div>
     <br><br><br>
 
     <footer id="footer1">
     <div id="footer2">
-         <a style="color: white;" id="more-btn" href="personal.html">Developed By Habiba Najafi</a>
+         <a style="color: white;" id="more-bt" href="personal.html">Developed By Habiba Najafi</a>
     </div>
 <div>
     <div id="footer3">
@@ -196,20 +229,17 @@
                     <strong>SAFARISTAN</strong>
                 </div>
             </div>
-            <p id="brand">Discover the beauty of Afghanistan.</p>
+            
         </div>
         <div id="footer4 social">
              <h4 style="text-align: center; font-size: 20px; margin-bottom: 10px;">Follow Us</h4>
              <div id="social-links">
-                <!-- <i class="fa-regular fa-envelope" style="font-size: 40px; color: rgb(223, 57, 57);"></i>
-                <i class="fa-brands fa-youtube" style="font-size: 40px; color: red;"></i>
-                <i class="fa-brands fa-facebook" style="font-size: 40px; color: blue;"></i>
-                <i class="fa-brands fa-linkedin" style="font-size: 40px; color: darkblue;"></i> -->
+                
 
-               <i class="fa-regular fa-envelope" style="font-size: 30px; color: white;"></i>
-                <i class="fa-brands fa-youtube" style="font-size: 30px; color: white;"></i>
-                <i class="fa-brands fa-facebook" style="font-size: 30px; color: white;"></i>
-                <i class="fa-brands fa-linkedin" style="font-size: 30px; color: white;"></i>
+               <i id="us1" class="fa-regular fa-envelope" style="font-size: 30px; color: white;"></i>
+                <i id="us2" class="fa-brands fa-youtube" style="font-size: 30px; color: white;"></i>
+                <i id="us3" class="fa-brands fa-facebook" style="font-size: 30px; color: white;"></i>
+                <i id="us4" class="fa-brands fa-linkedin" style="font-size: 30px; color: white;"></i>
              </div>
         </div>
         </div>
@@ -260,6 +290,80 @@
         <div id="footer5">
             <p>&copy; 2026 Safaristan. ALL rights rserved.</p>
         </div>       
-</footer>   
+</footer> 
+
+<script>
+    
+    
+
+const images = [
+    "./Distination-image/lake/2.webp",
+    "./Distination-image/lake/3.jpeg",
+    "./Distination-image/lake/4.jpg",
+    "./Distination-image/lake/5.jpeg",
+    "./Distination-image/lake/6.jpg",
+    "./Distination-image/lake/Band-e- amir.jpg"
+];
+
+let currentImage = 0;
+
+const lakeImage = document.getElementById("lakeImage");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+
+nextBtn.addEventListener("click", function () {
+    currentImage++;
+
+    if (currentImage >= images.length) {
+        currentImage = 0;
+    }
+
+    lakeImage.src = images[currentImage];
+});
+
+prevBtn.addEventListener("click", function () {
+    currentImage--;
+
+    if (currentImage < 0) {
+        currentImage = images.length - 1;
+    }
+
+    lakeImage.src = images[currentImage];
+});
+// --- Scroll-reveal animation ---
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.15 });
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+// --- Interactive map pins ---
+const pins = document.querySelectorAll('.map-pin');
+const popup = document.getElementById('map-popup');
+const popupTitle = document.getElementById('popup-title');
+const popupDesc = document.getElementById('popup-desc');
+const popupClose = document.getElementById('popup-close');
+
+pins.forEach(pin => {
+    pin.addEventListener('click', function () {
+        popupTitle.textContent = this.dataset.city;
+        popupDesc.textContent = this.dataset.desc;
+        popup.classList.add('active');
+    });
+});
+
+popupClose.addEventListener('click', function () {
+    popup.classList.remove('active');
+});
+
+
+</script>
+<script src="./safaristan-features.js"></script>  
 </body>
 </html>

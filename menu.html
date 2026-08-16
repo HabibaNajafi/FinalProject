@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./Restaurant.css">
+    <link rel="stylesheet" href="./safaristan-features.css">
 </head>
 <body>
 
@@ -13,15 +14,15 @@
             <div id="logo">
                 <!-- <img style="width: 50px; height: 50px; border-radius: 50px;" src="./image/Heratimage4.jpg" alt=""> -->
                 <img src="./image/NewLogo.PNG" style="width: 60px; height: 60px; border-radius: 50%;" alt="">
-                <h3 style="margin-top: 10px; font-size: 20px;">SAFARISTAN</h3>
+                <h3 style="margin-top: 10px; font-size: 35px;">SAFARISTAN</h3>
             </div>
             <div id="link">   
                 <a id="linkheader" href="Home.html">Home</a>  
                 <a id="linkheader" href="Distination.html">Destination</a>
                 <a id="linkheader" href="Experience.html">Experience</a>
-                <a id="linkheader" href="">Restaurants</a>
-                <a id="linkheader" href="">Contact</a> 
-                <a href="login.html">Logout</a>  
+                <a id="linkheader" href="Restaurant.html">Restaurants</a>
+                <a id="linkheader" href="contact.html">Contact</a> 
+                  
             </div>
             <div>
                 <a id="plan" href="">Plan Your Trip</a>
@@ -30,7 +31,7 @@
     </header><br><br><br><br><br><br>
 
     <section id="top-hotels">
-        <h1>Top Menu</h1>
+        <h1>Best Choice</h1>
         <div id="hotalcontaint">
             <div class="hotelcard">
                 <img src="./menuimge/beefberyani.jpeg" alt="">
@@ -111,7 +112,272 @@
     </section>
 
 
+    <script>
+        // ===============================
+// FOOD ORDER MODAL
+// ===============================
 
+// Create the modal automatically
+const orderModal = document.createElement("div");
+
+orderModal.id = "orderModal";
+
+orderModal.innerHTML = `
+    <div id="orderBox">
+
+        <button id="closeOrder">&times;</button>
+
+        <h2>Place Your Order</h2>
+
+        <p id="selectedFood"></p>
+        <p id="selectedPrice"></p>
+
+        <form id="orderForm">
+
+            <label for="customerName">Your Name</label>
+            <input 
+                type="text" 
+                id="customerName" 
+                placeholder="Enter your name"
+                required
+            >
+
+            <label for="phoneNumber">Phone Number</label>
+            <input 
+                type="tel" 
+                id="phoneNumber" 
+                placeholder="Enter your phone number"
+                required
+            >
+
+            <label for="quantity">Quantity</label>
+            <input 
+                type="number" 
+                id="quantity" 
+                value="1" 
+                min="1"
+                required
+            >
+
+            <button type="submit" id="confirmOrder">
+                Confirm Order
+            </button>
+
+        </form>
+
+        <p id="orderMessage"></p>
+
+    </div>
+`;
+
+// Add modal to the page
+document.body.appendChild(orderModal);
+
+
+// ===============================
+// MODAL STYLE
+// ===============================
+
+const modalStyle = document.createElement("style");
+
+modalStyle.innerHTML = `
+#orderModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+#orderBox {
+    position: relative;
+    width: 400px;
+    max-width: 90%;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+#orderBox h2 {
+    text-align: center;
+    color: #053b43;
+    margin-bottom: 20px;
+}
+
+#selectedFood {
+    font-size: 20px;
+    font-weight: bold;
+    color: #053b43;
+    margin-bottom: 5px;
+}
+
+#selectedPrice {
+    color: #0d766e;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#orderBox label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+#orderBox input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#confirmOrder {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #053b43;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#confirmOrder:hover {
+    background: #0d5c3a;
+}
+
+#closeOrder {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    color: #555;
+    cursor: pointer;
+}
+
+#closeOrder:hover {
+    color: red;
+}
+
+#orderMessage {
+    text-align: center;
+    color: #0d766e;
+    font-weight: bold;
+    margin-top: 15px;
+}
+`;
+
+document.head.appendChild(modalStyle);
+
+
+// ===============================
+// GET ALL ORDER BUTTONS
+// ===============================
+
+const orderButtons = document.querySelectorAll(".hotelcard button");
+
+const selectedFood = document.getElementById("selectedFood");
+const selectedPrice = document.getElementById("selectedPrice");
+
+const closeOrder = document.getElementById("closeOrder");
+
+
+// ===============================
+// OPEN MODAL
+// ===============================
+
+orderButtons.forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        // Find the card containing the clicked button
+        const card = button.closest(".hotelcard");
+
+        // Get food name
+        const foodName = card.querySelector("h3").textContent;
+
+        // Get price
+        const price = card.querySelector(".pricebook span").textContent;
+
+        // Show information in modal
+        selectedFood.textContent = "Food: " + foodName;
+        selectedPrice.textContent = price;
+
+        // Clear previous information
+        document.getElementById("orderForm").reset();
+
+        document.getElementById("orderMessage").textContent = "";
+
+        // Show modal
+        orderModal.style.display = "flex";
+    });
+
+});
+
+
+// ===============================
+// CLOSE MODAL
+// ===============================
+
+closeOrder.addEventListener("click", function () {
+    orderModal.style.display = "none";
+});
+
+
+// Close when clicking outside the modal
+orderModal.addEventListener("click", function (event) {
+
+    if (event.target === orderModal) {
+        orderModal.style.display = "none";
+    }
+
+});
+
+
+// ===============================
+// SUBMIT ORDER
+// ===============================
+
+const orderForm = document.getElementById("orderForm");
+
+orderForm.addEventListener("submit", function (event) {
+
+    // Prevent page refresh
+    event.preventDefault();
+
+    const customerName = document.getElementById("customerName").value;
+    const phoneNumber = document.getElementById("phoneNumber").value;
+    const quantity = document.getElementById("quantity").value;
+
+    const foodName = selectedFood.textContent.replace("Food: ", "");
+    const price = selectedPrice.textContent;
+
+    // Show confirmation
+    document.getElementById("orderMessage").innerHTML =
+        "Thank you, " + customerName + "!<br>" +
+        "Your order for " + quantity + " × " + foodName +
+        " has been placed successfully.";
+
+    // Clear form
+    orderForm.reset();
+
+});
+    </script>
+
+
+<script src="./safaristan-features.js"></script>
     
 </body>
 </html>

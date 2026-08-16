@@ -51,10 +51,14 @@ header{
 }
 #plan{
     text-decoration: none;
-    background-color: #024b3f;
+    background-color: #053b43;
     border-radius: 20px;
     padding: 12px 20px;
     color: white;
+}
+#logo h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #b49257;
 }
 #plan:hover{
     background: #0d5c3a;

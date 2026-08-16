@@ -11,7 +11,7 @@
     gap: 80px;
     align-items: center;
     padding-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 header{
     position: fixed;
@@ -19,7 +19,7 @@ header{
     left: 0;
     width: 100%;
     z-index: 700;
-    background-color: #005f63;
+    background-color:#005f63;
 }
 #logo{
     display: flex;
@@ -51,7 +51,7 @@ header{
 }
 #plan{
     text-decoration: none;
-     background-color: #024b3f;
+     background-color: #053b43;
     border-radius: 20px;
     padding: 12px 20px;
     color: white;
@@ -336,8 +336,19 @@ header{
 }
 /* Statistics */
 
+#us1:hover{
+    color: #E76F51 !important;
+}
+#us2:hover{
+    color:#FF0000 !important;
+}
+#us3:hover{
+    color:#1877F2 !important;
 
-
+}
+#us4:hover{
+    color: #0A66C2 !important;
+}
 
 /* lary section */
 #explore-wakhan{
@@ -464,11 +475,15 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    padding: 30px 60px;
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 100px;
     
+}
+#footer4-social{
+    margin-left: 20px;
+    margin-bottom: 30px;
 }
 
 #footer2 button{
@@ -522,7 +537,7 @@ header{
 #footer3 {
     display: flex;
     justify-content: space-between;
-    padding: 30px ;
+    padding: 70px 30px ;
     flex-wrap: wrap;
     gap: 40px;
    background-color: #005f63;
@@ -543,7 +558,12 @@ header{
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-top: 8px;
+}
+#logo h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #b49257;
+    margin-bottom: 5px;
 }
 
 .logo-icon {
@@ -624,10 +644,76 @@ header{
 /* بخش کپی رایت انتها */
 #footer5 {
     text-align: center;
-    padding: 0px;
+    padding: 10px;
     border-top: 1px solid #eeeeee;
     font-size: 0.8rem;
     color: #888;
     background-color: #005f63;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:1000;
+}
+
+.modal-content{
+    width:700px;
+    max-width:90%;
+    background:white;
+    margin:50px auto;
+    padding:20px;
+    border-radius:10px;
+    position:relative;
+}
+
+#closeModal{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.slider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.slider img{
+    width:180px;
+    height:130px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+form input{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+#submitBtn{
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    background:#0b6a6d;
+    color:white;
+    cursor:pointer;
 }
 

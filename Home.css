@@ -13,6 +13,9 @@
     --text-muted: #053b43;
     --border-soft: #E7DFD6;
 }
+html, body {
+    overflow-x: hidden;
+}
 
 #header {
     display: flex;
@@ -21,7 +24,7 @@
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #053B43;
+    background-color: #2A9D8F;
 }
 
 #header {
@@ -38,7 +41,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* gap: 10px; */
     margin-top: 5px;
 }
 
@@ -70,7 +72,7 @@
 
 #plan {
     text-decoration: none;
-    background-color: #024b3f;
+    background-color:  #053b43;
 
     border-radius: 20px;
     padding: 12px 20px;
@@ -90,7 +92,8 @@
 }
 
 #logo h3 {
-    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #b49257;
 }
 
 * {
@@ -182,7 +185,7 @@
 .btn-primary {
     background-color: #053b43;
     color: #fff;
-    padding: 14px 28px;
+    padding: 10px 28px;
     border: none;
     border-radius: 25px;
     font-size: 1rem;
@@ -192,6 +195,34 @@
     align-items: center;
     gap: 10px;
     transition: background 0.3s;
+}
+#video{
+    background-color:  #b49257;
+    color: white;
+    
+    padding: 10px 28px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+#video:hover{
+       background-color: #D99A24;
+}
+
+#you{
+    
+    font-size: 30px;
+    color:white;
+}
+#you:hover{
+color: red;
 }
 
 .btn-primary:hover {
@@ -501,6 +532,24 @@ body {
     direction: ltr;
 }
 
+#us2:hover{
+     color:#FF0000 !important;
+
+}
+#us1:hover{
+    color: #E76F51 !important;
+
+}
+#us3:hover{
+color:#1877F2 !important;
+}
+#us4:hover{
+    color: #0A66C2 !important;
+
+}
+
+
+
 
 
 .why-visit {
@@ -638,7 +687,7 @@ body {
 #footer3 {
     display: flex;
     justify-content: space-between;
-    padding: 70px 30px;
+    padding: 60px 30px;
     flex-wrap: wrap;
     gap: 40px;
     background-color: #005f63;
@@ -802,6 +851,119 @@ body {
     color: #888;
     background-color:#005f63;
     margin-top: -10px;
+}
+
+/* Open Button */
+#openBtn{
+    padding:12px 25px;
+    background:#2e8b57;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+/* Modal Background */
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+/* Modal Box */
+.modal-content{
+    background:white;
+    width:500px;
+    padding:25px;
+    border-radius:12px;
+    position:relative;
+    text-align:center;
+}
+
+/* Close Button */
+#closeBtn{
+    position:absolute;
+    top:10px;
+    right:15px;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* Heading */
+.modal-content h2{
+    margin-bottom:20px;
+    color:#2e8b57;
+}
+
+/* Slider */
+.slider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.slider img{
+    width:220px;
+    height:150px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* Arrows */
+.arrow{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:#2e8b57;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* Form Inputs */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+input{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+label{
+    text-align:left;
+    font-weight:bold;
+}
+
+/* Submit Button */
+.submit-btn{
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    background:#2e8b57;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.submit-btn:hover{
+    background:#246b44;
 }
 
 
